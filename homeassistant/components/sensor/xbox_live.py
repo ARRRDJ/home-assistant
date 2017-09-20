@@ -57,7 +57,7 @@ class XboxSensor(Entity):
         self._api = api
 
         # get profile info
-        profile = self._api.get_user_profile(self._xuid)
+        profile = self._api.get_user_gamercard(self._xuid)
 
         if profile.get('success', True) and profile.get('code', 0) != 28:
             self.success_init = True
